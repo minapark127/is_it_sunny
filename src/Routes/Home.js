@@ -1,10 +1,17 @@
 import React from "react";
 import Outline from "../Components/Outline";
+import useWeather from "../Components/useWeather";
 
-export default () => (
-  <>
-    <Outline>
-      <h1>Home!!</h1>
-    </Outline>
-  </>
-);
+function Home() {
+  const { loading, weather, error } = useWeather();
+
+  return (
+    <>
+      <Outline>
+        <h1>Home!!</h1>
+      </Outline>
+    </>
+  );
+}
+
+export default Home;
