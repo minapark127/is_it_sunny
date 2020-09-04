@@ -4,12 +4,22 @@ import useWeather from "../Components/useWeather";
 
 function Home() {
   const { loading, weather, error } = useWeather();
-
+  console.log(loading, weather);
   return (
     <>
-      <Outline>
-        <h1>Home!!</h1>
-      </Outline>
+      {loading ? (
+        "loading..."
+      ) : weather && Object.keys(weather).length === 0 ? (
+        "loading..."
+      ) : (
+        <>
+          {weather && Object.keys(weather).length > 0 && (
+            <Outline weather={weather}>
+              <h1>Home!!</h1>
+            </Outline>
+          )}
+        </>
+      )}
     </>
   );
 }
