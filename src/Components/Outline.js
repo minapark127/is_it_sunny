@@ -1,10 +1,8 @@
 import React from "react";
-import Landing from "./Landing";
 import Header from "./Header";
 
-const Outline = ({ children, weather }) => (
+const Outline = ({ children, weather, temp }) => (
   <>
-    <Landing timezone={weather.timezone}></Landing>
     <Header />
     <div>{children}</div>
   </>

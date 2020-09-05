@@ -1,15 +1,15 @@
 import React from "react";
 import { HashRouter, Route } from "react-router-dom";
-import Home from "../Routes/Home";
+import Current from "../Routes/Current";
 import Hourly from "../Routes/Hourly";
 import Daily from "../Routes/Daily";
 
 const Router = () => {
   return (
     <HashRouter>
-      <Route path="/" exact component={Home} />
-      <Route path="/hourly" exact component={Hourly} />
-      <Route path="/daily" exact component={Daily} />
+      <Route path="/" exact component={Current} />
+      <Route path="/hourly" component={Hourly} />
+      <Route path="/daily" component={Daily} />
     </HashRouter>
   );
 };

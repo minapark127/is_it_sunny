@@ -1,10 +1,9 @@
 import React from "react";
-import Outline from "../Components/Outline";
 import useWeather from "../Components/useWeather";
+import Landing from "../Components/Landing";
 
 function Home() {
   const { loading, weather, error } = useWeather();
-  console.log(loading, weather);
   return (
     <>
       {loading ? (
@@ -14,9 +13,11 @@ function Home() {
       ) : (
         <>
           {weather && Object.keys(weather).length > 0 && (
-            <Outline weather={weather}>
-              <h1>Home!!</h1>
-            </Outline>
+            <Landing
+              timezone={weather.timezone}
+              weatherId={weather.current.weather[0].main}
+              temp={weather.current.temp}
+            ></Landing>
           )}
         </>
       )}
