@@ -11,13 +11,13 @@ const Clear = `https://images.pexels.com/photos/1627835/pexels-photo-1627835.jpe
 const Clouds = `https://images.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg?auto=compress&cs=tinysrgb&fit=crop&h=500`;
 
 const Wrapper = styled.div`
-  height: 55vh;
+  height: 65vh;
   width: 100vw;
   font-weight: 200;
 `;
 
 const BackgroundImg = styled.div`
-  height: 55vh;
+  height: 65vh;
   width: 100vw;
   position: absolute;
   top: 0%;
@@ -38,7 +38,7 @@ const BackgroundImg = styled.div`
       : Mist});
   background-position: center;
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.6;
 `;
 
 const Container = styled.div`
@@ -64,7 +64,7 @@ const Info = styled.section`
 `;
 const Current = styled.section`
   position: absolute;
-  bottom: 30px;
+  bottom: 90px;
   font-size: 30px;
   ul {
     display: flex;

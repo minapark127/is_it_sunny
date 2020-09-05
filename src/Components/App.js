@@ -5,19 +5,17 @@ import Home from "../Routes/Home";
 import useWeather from "./useWeather";
 
 function App() {
-  const { loading } = useWeather();
+  const { loading, weather } = useWeather();
   return (
     <div className="App">
       <>
-        {!loading ? (
+        {!loading && weather && Object.keys(weather).length > 0 ? (
           <>
             <Home />
             <Router />
             <GlobalStyles />
           </>
-        ) : (
-          "loading"
-        )}
+        ) : null}
       </>
     </div>
   );

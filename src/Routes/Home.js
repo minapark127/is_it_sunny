@@ -6,21 +6,13 @@ function Home() {
   const { loading, weather, error } = useWeather();
   return (
     <>
-      {loading ? (
-        "loading..."
-      ) : weather && Object.keys(weather).length === 0 ? (
-        "loading..."
-      ) : (
-        <>
-          {weather && Object.keys(weather).length > 0 && (
-            <Landing
-              timezone={weather.timezone}
-              weatherId={weather.current.weather[0].main}
-              temp={weather.current.temp}
-            ></Landing>
-          )}
-        </>
-      )}
+      {!loading && weather && Object.keys(weather).length > 0 ? (
+        <Landing
+          timezone={weather.timezone}
+          weatherId={weather.current.weather[0].main}
+          temp={weather.current.temp}
+        ></Landing>
+      ) : null}
     </>
   );
 }
