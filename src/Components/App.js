@@ -2,13 +2,23 @@ import React from "react";
 import Router from "./Router";
 import GlobalStyles from "./GlobalStyles";
 import Home from "../Routes/Home";
+import useWeather from "./useWeather";
 
 function App() {
+  const { loading } = useWeather();
   return (
     <div className="App">
-      <Home />
-      <Router />
-      <GlobalStyles />
+      <>
+        {!loading ? (
+          <>
+            <Home />
+            <Router />
+            <GlobalStyles />
+          </>
+        ) : (
+          "loading"
+        )}
+      </>
     </div>
   );
 }
