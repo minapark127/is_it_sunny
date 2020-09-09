@@ -10,19 +10,24 @@ const Ul = styled.ul`
   font-size: 25px;
   display: flex;
   align-items: flex-end;
-  color: #dff9fb;
+  color: #dfe6e9;
 `;
 
 const Li = styled.li`
   display: flex;
   background-color: ${(props) =>
-    props.current ? `rgba(99, 110, 114, 0.8)` : `rgba(99, 110, 114, 0.5)`};
+    props.current ? `rgba(45, 52, 54, 0.85)` : `rgba(45, 52, 54, 0.55)`};
   height: 100%;
+  transition: background 0.3s linear;
+
   :hover {
     cursor: pointer;
-    background: rgba(99, 110, 114, 0.8);
+    background: rgba(45, 52, 54, 0.85);
   }
-  transition: background 0.2s linear;
+
+  :not(:last-child) {
+    border-right: 1.5px solid rgba(45, 52, 54, 0.85);
+  }
 `;
 const SLink = styled(Link)`
   width: 100%;

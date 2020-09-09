@@ -13,7 +13,7 @@ const Clouds = `https://images.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg?
 const Wrapper = styled.div`
   height: 65vh;
   width: 100vw;
-  font-weight: 200;
+  /* font-weight: 200; */
 `;
 
 const BackgroundImg = styled.div`
@@ -38,7 +38,7 @@ const BackgroundImg = styled.div`
       : Mist});
   background-position: center;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.5;
 `;
 
 const Container = styled.div`

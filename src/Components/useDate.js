@@ -6,16 +6,18 @@ function useDate() {
 
   const getDate = () => {
     const date = new window.Date();
-    const time = date
-      .toLocaleTimeString([], {
-        hour12: true,
-      })
-      .padStart(11, "0");
+    const time = date.toLocaleTimeString([], {
+      hour12: true,
+    });
+
     const weekday = date.toLocaleString([], { weekday: "long" });
     const month = date.toLocaleString([], { month: "long" });
     const day = date.toLocaleString([], { day: "numeric" });
 
-    setTime({ current: time.slice(0, 5), apm: time.slice(-2) });
+    setTime({
+      current: `${time.split(":")[0]}:${time.split(":")[1]}`,
+      apm: time.slice(-2),
+    });
     setDate({ weekday, month, day });
   };
   useEffect(() => {
