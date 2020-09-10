@@ -7,11 +7,11 @@ function Current() {
   const { loading, weather, error } = useWeather();
   return (
     <>
-      {!loading && weather && Object.keys(weather).length > 0 ? (
-        <Outline>
+      <Outline>
+        {!loading && weather && Object.keys(weather).length > 0 ? (
           <CurrentWeather currentWeather={weather.current} />
-        </Outline>
-      ) : null}
+        ) : null}
+      </Outline>
     </>
   );
 }

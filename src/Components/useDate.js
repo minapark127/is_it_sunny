@@ -15,7 +15,9 @@ function useDate() {
     const day = date.toLocaleString([], { day: "numeric" });
 
     setTime({
-      current: `${time.split(":")[0]}:${time.split(":")[1]}`,
+      current: `${time.split(":")[0] === "0" ? "12" : time.split(":")[0]}:${
+        time.split(":")[1]
+      }`,
       apm: time.slice(-2),
     });
     setDate({ weekday, month, day });

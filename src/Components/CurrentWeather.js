@@ -22,7 +22,7 @@ const Current = styled.section`
     align-items: center;
     dt {
       text-transform: capitalize;
-      font-size: 18px;
+      font-size: 22px;
     }
     dd {
       width: 60%;
