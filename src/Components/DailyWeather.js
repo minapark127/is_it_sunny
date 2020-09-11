@@ -6,6 +6,10 @@ const Wrapper = styled.div`
   color: #dfe6e9;
   height: 35vh;
   padding: 30px 50px;
+  @media (max-width: 425px) {
+    height: 50vh;
+    padding: 30px 20px;
+  }
 `;
 
 const Items = styled.section`
@@ -26,12 +30,21 @@ const Item = styled.dl`
   align-items: center;
   dt {
     font-size: 20px;
+    @media (max-width: 425px) {
+      font-size: 16px;
+    }
   }
   dd {
     text-align: center;
   }
   img {
     height: 50px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 425px) {
+    font-size: 14px;
   }
 `;
 const Separator = styled.div`

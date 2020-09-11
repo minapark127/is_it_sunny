@@ -9,6 +9,16 @@ const Wrapper = styled.div`
   padding: 30px;
   display: grid;
   grid-template-columns: 0.8fr 1.5fr;
+  @media (max-width: 768px) {
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    overflow: scroll;
+  }
+  @media (max-width: 425px) {
+    height: 50vh;
+  }
 `;
 const Current = styled.section`
   display: grid;
@@ -23,6 +33,9 @@ const Current = styled.section`
     dt {
       text-transform: capitalize;
       font-size: 22px;
+      @media (max-width: 425px) {
+        font-size: 16px;
+      }
     }
     dd {
       width: 60%;
@@ -48,6 +61,9 @@ const Current = styled.section`
       }
       dd {
         font-size: 30px;
+        @media (max-width: 768px) {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -56,6 +72,12 @@ const Current = styled.section`
 const Items = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 30px;
+  }
 `;
 
 const Item = styled.dl`
@@ -63,19 +85,32 @@ const Item = styled.dl`
   grid-template-rows: 2.5fr repeat(3, 1fr);
   align-items: center;
   justify-items: center;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
   svg {
     stroke: #dfe6e9;
     width: 40%;
     height: 40%;
     align-self: end;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }
   }
   dt {
     font-size: 16px;
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
     text-transform: uppercase;
     opacity: 0.8;
   }
   dd {
     font-size: 25px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 `;
 

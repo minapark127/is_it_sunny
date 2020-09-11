@@ -6,6 +6,9 @@ const Wrapper = styled.div`
   color: #dfe6e9;
   height: 35vh;
   overflow: scroll;
+  @media (max-width: 425px) {
+    height: 50vh;
+  }
 `;
 
 const Items = styled.section`
@@ -35,6 +38,12 @@ const Item = styled.dl`
   }
   dd:nth-of-type(3) {
     align-self: start;
+  }
+  @media (max-width: 425px) {
+    height: 80%;
+    img {
+      width: 100%;
+    }
   }
 `;
 

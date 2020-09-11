@@ -5,12 +5,23 @@ import styled from "styled-components";
 const Ul = styled.ul`
   position: absolute;
   top: calc(65vh - 50px);
+  @media (max-width: 425px) {
+    top: calc(50vh - 50px);
+  }
   height: 50px;
   z-index: 1;
   font-size: 25px;
   display: flex;
   align-items: flex-end;
   color: #dfe6e9;
+  @media (max-width: 768px) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 425px) {
+    font-size: 18px;
+  }
 `;
 
 const Li = styled.li`
@@ -28,10 +39,18 @@ const Li = styled.li`
   :not(:last-child) {
     border-right: 1.5px solid rgba(45, 52, 54, 0.85);
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 `;
 const SLink = styled(Link)`
   width: 100%;
   padding: 10px 50px;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export default () => {
