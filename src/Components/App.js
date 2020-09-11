@@ -3,9 +3,10 @@ import Router from "./Router";
 import GlobalStyles from "./GlobalStyles";
 import Home from "../Routes/Home";
 import useWeather from "./useWeather";
+import Error from "./Error";
 
 function App() {
-  const { loading, weather } = useWeather();
+  const { loading, weather, error } = useWeather();
   return (
     <div className="App">
       <>
@@ -16,6 +17,7 @@ function App() {
             <GlobalStyles />
           </>
         ) : null}
+        {error && <Error />}
       </>
     </div>
   );

@@ -13,7 +13,7 @@ const Clouds = `https://images.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg?
 const Wrapper = styled.div`
   height: 65vh;
   width: 100vw;
-  /* font-weight: 200; */
+  background-color: white;
 `;
 
 const BackgroundImg = styled.div`

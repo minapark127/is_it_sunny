@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 
-const Outline = ({ children, weather, temp }) => (
+const Outline = ({ children }) => (
   <>
     <Header />
     <div>{children}</div>

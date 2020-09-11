@@ -1,6 +1,7 @@
 import React from "react";
 import useWeather from "../Components/useWeather";
 import Landing from "../Components/Landing";
+import Error from "../Components/Error";
 
 function Home() {
   const { loading, weather, error } = useWeather();
@@ -13,6 +14,7 @@ function Home() {
           temp={weather.current.temp}
         ></Landing>
       ) : null}
+      {error && <Error />}
     </>
   );
 }

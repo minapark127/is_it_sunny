@@ -87,16 +87,20 @@ export default ({ currentWeather }) => {
       case "sunrise":
         const sunriseTime = new Date(currentWeather.sunrise * 1000);
         const sunrise = sunriseTime.toLocaleTimeString([], {
-          timeStyle: "short",
+          hour12: true,
         });
-        return sunrise;
+        return `${
+          sunrise.split(":")[0] === "0" ? "12" : sunrise.split(":")[0]
+        }:${sunrise.split(":")[1]} ${sunrise.slice(-2)}`;
         break;
       case "sunset":
         const sunsetTime = new Date(currentWeather.sunset * 1000);
         const sunset = sunsetTime.toLocaleTimeString([], {
-          timeStyle: "short",
+          hour12: true,
         });
-        return sunset;
+        return `${sunset.split(":")[0] === "0" ? "12" : sunset.split(":")[0]}:${
+          sunset.split(":")[1]
+        } ${sunset.slice(-2)}`;
         break;
 
       default:
