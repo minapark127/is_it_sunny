@@ -61,8 +61,8 @@ export default ({ hourly }) => {
         {hourly && (
           <>
             {hourly.slice(1, 25).map((hour, index) => (
-              <>
-                <Item key={index}>
+              <React.Fragment key={index}>
+                <Item>
                   <dt>{getTime(hour.dt)}</dt>
                   <dd>
                     <img
@@ -74,7 +74,7 @@ export default ({ hourly }) => {
                   <dd>{Math.floor(hour.temp)}°c</dd>
                 </Item>
                 {index < 23 ? <Separator /> : null}
-              </>
+              </React.Fragment>
             ))}
           </>
         )}

@@ -54,8 +54,8 @@ export default ({ daily }) => {
         {daily && (
           <>
             {daily.map((day, index) => (
-              <>
-                <Item key={index}>
+              <React.Fragment key={index}>
+                <Item>
                   <dt>{getDay(day.dt)}</dt>
                   <dd>
                     <img
@@ -68,7 +68,7 @@ export default ({ daily }) => {
                   <dd>{Math.floor(day.temp.min)}°c</dd>
                 </Item>
                 {index < 7 ? <Separator /> : null}
-              </>
+              </React.Fragment>
             ))}
           </>
         )}

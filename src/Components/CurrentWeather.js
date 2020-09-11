@@ -170,7 +170,9 @@ export default ({ currentWeather }) => {
               </svg>
               <dt>UV Index</dt>
               <span>―</span>
-              <dd>{Math.floor(currentWeather.uvi)}</dd>
+              <dd>
+                {currentWeather.uvi ? Math.floor(currentWeather.uvi) : "-"}
+              </dd>
             </Item>
             <Item>
               <svg
