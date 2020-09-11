@@ -1,0 +1,8 @@
+{
+  "short_name": "is it sunny",
+  "name": "A simple weather web-app to practice React & Styled-components",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
