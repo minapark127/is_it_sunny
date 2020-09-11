@@ -22,13 +22,15 @@ function useWeather() {
   };
 
   const updateWeather = async () => {
-    try {
-      const { data } = await Api(geo.lat, geo.long);
-      setWeather(data);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setLoading(false);
+    if (geo.lat !== "" && geo.long !== "") {
+      try {
+        const { data } = await Api(geo.lat, geo.long);
+        setWeather(data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
